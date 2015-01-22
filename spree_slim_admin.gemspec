@@ -27,6 +27,8 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'spree_core', '~> 2.4.2'
+  s.add_dependency 'normalize-rails'
+  s.add_dependency 'modernizr-rails'
 
   s.add_development_dependency 'capybara', '~> 2.4'
   s.add_development_dependency 'coffee-rails'
