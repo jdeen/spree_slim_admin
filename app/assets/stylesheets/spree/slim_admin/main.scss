@@ -4,17 +4,44 @@
   
   .menu-button {
     position: fixed;
-    top: 54px;
+    top: 65px;
     right: 10px;
     transition-property: top, right, bottom, left;
     transition-duration: 0.3s;
+    
+    i {
+      color: #fafafa;
+    }
   }
 
   .main-menu {
     position: fixed;
     display: none;
-    right: 10px;
+    right: 0px;
     top: 50px;
+
+    ul {
+      list-style: none;
+      padding: 5px;
+
+      li {
+        width: 190px;
+
+        a {
+          display: block;
+          padding: 10px 10px 10px 50px;
+          border-top: #ccc;
+
+          &:last-child {
+            border-bottom: lighten(black, 15%);
+          }
+
+          &:hover {
+            background: lighten(black, 10%);
+          }
+        }
+      }
+    }
   }
 
 
