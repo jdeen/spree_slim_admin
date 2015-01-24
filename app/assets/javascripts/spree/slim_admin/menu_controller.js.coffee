@@ -3,12 +3,19 @@ class window.MenuController
     @$domContainer = $('#spree-admin-plugin-menu')
     @$domMenuButton = $('.menu-button', @$domContainer)
 
+    console.log @$domContainer
+    console.log @$domMenuButton
+
+    @_hideMenu()
+
     @bind()
 
   bind: ->
-    @$domMenuButton.click(@toggleMenuVisibility)
+    @$domMenuButton.click => 
+      @toggleMenuVisibility()
 
   toggleMenuVisibility: () ->
+    console.log 'here'
     menuOpen = @$domContainer.data('menu-open')
 
     if menuOpen == true
@@ -17,13 +24,15 @@ class window.MenuController
       @_showMenu()
 
   _hideMenu: ->
+    console.log 'Hiding'
     @$domContainer
-      .addClass("open")
+      .removeClass("open")
       .data("menu-open", false)
  
   _showMenu: ->
+    console.log 'showing'
     @$domContainer
-      .removeClass("open")
+      .addClass("open")
       .data("menu-open", true)
 
 
