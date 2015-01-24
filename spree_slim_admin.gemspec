@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'slim-rails'
   s.add_dependency 'normalize-rails'
   s.add_dependency 'modernizr-rails'
+  s.add_dependency 'font-awesome-rails'
 
   s.add_development_dependency 'capybara', '~> 2.4'
   s.add_development_dependency 'coffee-rails'
