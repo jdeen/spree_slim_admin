@@ -19,10 +19,6 @@ module SpreeSlimAdmin
         run 'bundle exec rake railties:install:migrations FROM=spree_slim_admin'
       end
 
-      def copy_views
-        copy_file "app/views/spree/slim_admin/_plugins_menu.html.erb", "app/views/slim_admin/_plugins_menu.html.erb"
-      end
-
       def run_migrations
         run_migrations = options[:auto_run_migrations] || ['', 'y', 'Y'].include?(ask 'Would you like to run the migrations now? [Y/n]')
         if run_migrations
