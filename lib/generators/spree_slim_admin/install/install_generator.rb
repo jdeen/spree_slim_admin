@@ -3,6 +3,7 @@ module SpreeSlimAdmin
     class InstallGenerator < Rails::Generators::Base
 
       class_option :auto_run_migrations, :type => :boolean, :default => false
+      source_root File.expand_path('../../../../../', __FILE__)
 
       def add_javascripts
         append_file 'vendor/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/spree_slim_admin\n"
@@ -16,6 +17,10 @@ module SpreeSlimAdmin
 
       def add_migrations
         run 'bundle exec rake railties:install:migrations FROM=spree_slim_admin'
+      end
+
+      def copy_views
+        copy_file "app/views/spree/slim_admin/_plugins_menu.html.erb", "app/views/slim_admin/_plugins_menu.html.erb"
       end
 
       def run_migrations
