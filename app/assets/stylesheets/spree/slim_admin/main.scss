@@ -10,6 +10,13 @@
     transition-duration: 0.3s;
   }
 
+  .main-menu {
+    position: fixed;
+    display: none;
+    right: 10px;
+    top: 50px;
+  }
+
 
   &.open {
     position: fixed;
@@ -26,6 +33,10 @@
   
     .menu-button {
       top: 10px;
+    }
+
+    .main-menu {
+      display: block;
     }
   }
 }
