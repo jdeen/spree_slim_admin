@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 3.0.x'
+  # s.add_dependency 'spree_core', '3.0.0.beta'
   s.add_dependency 'deface'
   s.add_dependency 'slim-rails'
   s.add_dependency 'normalize-rails'
